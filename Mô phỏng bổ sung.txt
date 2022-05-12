@@ -1,0 +1,11 @@
+Mô phỏng bổ sung:
++ Mô phỏng trường hợp có primary và secondary
++ Thêm tải vào thời điểm t = 2 (?) để test khả năng phục hồi của secondary
++ Câu hỏi: Sau khi 50Hz ổn định, bỏ secondary ra thì còn ổn định ko?
++ Mô phỏng trường hợp tải giảm đột ngột, tần số tăng lên.
++ Vấn đề ngắn mạch trong hệ thống?
++ Trường hợp thêm nguồn (inverter)?
++ Khắc phục tình trạng inverter 3 dao động tần số nhiều hơn các inverter khác. 
++ Test trường hợp xuất hiện tải ở đầu cực các inverter khác để xem có phản ứng như inverter 3 ko?
+
+Ưu tiên rush bộ MPC.
