@@ -78,12 +78,8 @@ A(3,2) = a32;
 A(4,1) = a41;
 
 %DMPC Parameter
-Vmin = 145;
-Vmax = 155;
-Smax1 = 2400;
-Smax2 = 2400;
-Smax3 = 2400;
-Smax4 = 2400;
+Vmin = 330;
+Vmax = 290;
 
 %Lambda initialization
 lambda1 = [30000 50000 90000 50000]';
@@ -96,8 +92,8 @@ Smax = [45e3 45e3 37e3 37e3]';
 
 
 
-lo_co = 0.1; %PQ low pass filter
-time_thresh = 2;
+lo_co = 0.2; %PQ low pass filter
+time_thresh = 1.5;
 %save mat file
 save('init.mat');
 
