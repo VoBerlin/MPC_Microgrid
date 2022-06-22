@@ -58,8 +58,8 @@ b3v = 0;
 b4v = 0;
 
 %coupling gain
-cf = 40;
-cv = 40;
+cf = 100;
+cv = 100;
 
 %adjuncancy matrix
 a12 = 0;
@@ -78,8 +78,8 @@ A(3,2) = a32;
 A(4,1) = a41;
 
 %DMPC Parameter
-Vmin = 330;
-Vmax = 290;
+Vmin = 290;
+Vmax = 330;
 
 %Lambda initialization
 lambda1 = [30000 50000 90000 50000]';
@@ -90,9 +90,9 @@ lambda5 = [150 130 200 130]';
 lambda6 = [5000 2000 1000 2000]';
 Smax = [45e3 45e3 37e3 37e3]';
 
+Tsamp = 0.1; %secondary
 
-
-lo_co = 0.2; %PQ low pass filter
+lo_co = 0.1; %PQ low pass filter
 time_thresh = 1.5;
 %save mat file
 save('init.mat');
