@@ -93,7 +93,7 @@ Smax = [45e3 45e3 37e3 37e3]';
 Tsamp = 0.1; %secondary
 
 lo_co = 0.1; %PQ low pass filter
-time_thresh = 1.5;
+time_thresh = 0.5;
 %save mat file
 save('init.mat');
 
