@@ -94,6 +94,9 @@ Tsamp = 0.1; %secondary
 
 lo_co = 0.1; %PQ low pass filter
 time_thresh = 0.5;
+
+%horizon step
+N=5;
 %save mat file
 save('init.mat');
 
