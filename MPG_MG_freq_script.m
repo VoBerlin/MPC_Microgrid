@@ -62,20 +62,10 @@ cf = 100;
 cv = 100;
 
 %adjuncancy matrix
-a12 = 0;
-a14 = 0;
-a21 = 1;
-a23 = 0;
-a32 = 1;
-a34 = 0;
-a41 = 1;
-a43 = 0;
 
 %adjuncancy matrix formation
-A = zeros(4,4);
-A(2,1) = a21;
-A(3,2) = a32;
-A(4,1) = a41;
+A = ones(4) - eye(4);
+
 
 
 %Lambda initialization
@@ -87,11 +77,11 @@ Pmax = [45e3 45e3 37e3 37e3]';
 
 Tsamp = 0.1; %secondary
 
-lo_co = 0.2; %PQ low pass filter
-time_thresh = 1;
+lo_co = 0.07; %PQ low pass filter
+time_thresh = 0.5;
 
 %horizon step
-N=5;
+N=2;
 %save mat file
 save('init.mat');
 
