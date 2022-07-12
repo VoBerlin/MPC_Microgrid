@@ -28,7 +28,7 @@ n_q3 = 1.5e-3/droopDivide2;
 n_q4 = 1.5e-3/droopDivide2;
 w_c_high = 2*pi*50;
 kL = 5e-7;
-LD_ref1 = 200e-6;
+LD_ref1 = 50e-6;
 
 
 %LC filter (Il max = 1.1 I nom)
@@ -79,16 +79,16 @@ A(4,1) = a41;
 
 
 %Lambda initialization
-lambda1 = [30000 50000 90000 50000]';
-lambda2 = [5 6 7 6]';
-lambda3 = [80000 80000 900000 80000]';
+lambda1 = [3 3 3 3]';
+lambda2 = [1.1 1.9 1.5 1.2]';
+lambda3 = [9e-4 1.2e-2 3e-3 3e-3]';
 
 Pmax = [45e3 45e3 37e3 37e3]';
 
 Tsamp = 0.1; %secondary
 
 lo_co = 0.2; %PQ low pass filter
-time_thresh = 8;
+time_thresh = 1;
 
 %horizon step
 N=5;
