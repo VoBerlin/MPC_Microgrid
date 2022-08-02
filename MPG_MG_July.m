@@ -15,11 +15,11 @@ f_c = 50e3;
 % droop
 %m_p1 = 4.187e-3; %1.5kw, 2% (số liệu Bá Linh)
 droopDivide = 1;
-droopDivide2 = 10;
+droopDivide2 = 20;
 m_p1 = 9.4e-5/droopDivide;
 m_p2 = 9.4e-5/droopDivide;
-m_p3 = 12.5e-5/droopDivide;
-m_p4 = 12.5e-5/droopDivide;
+m_p3 = 11.4e-5/droopDivide;
+m_p4 = 11.4e-5/droopDivide;
 %voltage droop %0.5 kvar, 5%
 %n_q1 = 0.02; %Số liệu Bá Linh
 n_q1 = 1.3e-3/droopDivide2;
@@ -28,7 +28,7 @@ n_q3 = 1.5e-3/droopDivide2;
 n_q4 = 1.5e-3/droopDivide2;
 w_c_high = 2*pi*50;
 kL = 1e-7;
-LD_ref1 = 400e-6;
+LD_ref1 = 50e-6;
 
 
 %LC filter (Il max = 1.1 I nom)
@@ -64,21 +64,22 @@ cv = 100;
 %adjuncancy matrix
 
 %adjuncancy matrix formation
-A = [0 1 1 1; 1 0 0 0; 1 0 0 0; 1 0 0 0];
+A = [0 1 1 1 ; 1 0 1 1 ; 1 1 0 1 ; 1 1 1 0];
 
 %Lambda initialization
-lambda3 = [1e-3 1e-3 1e-3 1e-3]';
-lambda2 = [0.5e-2 0.5e-2 0.5e-2 0.5e-2]';
-lambda1 = [4 4 4 4]';
+lambda3 = [1.5e-3 1.5e-3 1.5e-3 1.5e-3]';
+lambda2 = [0.8e-2 0.8e-2 0.8e-2 0.8e-2]';
+lambda1 = [1 1 1 1]';
 
 Pmax = [45e3 45e3 37e3 37e3]';
 
 Tsamp = 0.1; %secondary
 
-lo_co = 0.15; %PQ low pass filter
-time_thresh = 0.5;
-load_on = 3;
-N=3;
+lo_co = 0.1; %PQ low pass filter
+time_thresh = 0.8;
+load_on = 1;
+load_off = 21;
+N=5;
 %save mat file
 save('init.mat');
 %todo: calculate theta k+1 and then Pk+1
